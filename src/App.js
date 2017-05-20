@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Switch, Route, Link } from 'react-router-dom';
+import { Switch, Route, NavLink } from 'react-router-dom';
+import logo from './images/logo.svg';
 import './App.css';
 
 // main pages
@@ -13,9 +14,14 @@ export default class App extends Component {
       <div className="App">
         <div className="App-header">
           <h2>Kris sites</h2>
-          <Links />
+          <div className="App-header-bottom">
+            <img src={logo} className="App-logo" alt="logo"/>
+            <Links />
+          </div>
         </div>
-        <PageSwitcher />
+        <div className="Page">
+          <PageSwitcher />
+        </div>
       </div>
     );
   }
@@ -23,10 +29,10 @@ export default class App extends Component {
 
 const Links = () => (
   <nav className="PageLinks">
-    <ul>
-      <li> <Link to='/'> Home </Link></li>
-      <li> <Link to='/posts'> Posts </Link></li>
-      <li> <Link to='/projectPage'> Projects </Link></li>
+    <ul className="PageLinksList">
+      <li> <NavLink exact to='/' activeClassName="Selected"> Home </NavLink></li>
+      <li> <NavLink to='/posts' activeClassName="Selected"> Posts </NavLink></li>
+      <li> <NavLink to='/projectPage' activeClassName="Selected"> Projects </NavLink></li>
     </ul>
   </nav>
 )
