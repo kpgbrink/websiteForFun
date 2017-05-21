@@ -5,7 +5,7 @@ export default class HomePage extends Component {
     return (
       <div className="HomePage">
         <p className="Description">
-          Hello this is the main page
+          Hello thissss website willgaga help you show off your work and you can easilyhello edit it anytime.
         </p>
       </div>
     );
