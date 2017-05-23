@@ -7,6 +7,7 @@ import './App.css';
 import HomePage from './mainPages/HomePage';
 import PostPage from './mainPages/PostPage';
 import ProjectPage from './mainPages/ProjectPage';
+import NotFound from './mainPages/NotFound';
 
 export default class App extends Component {
   render() {
@@ -42,5 +43,6 @@ const PageSwitcher = () => (
     <Route exact path='/' component={HomePage}/>
     <Route path='/posts' component={PostPage}/>
     <Route path='/projectPage' component={ProjectPage}/>
+    <Route path='*' component={NotFound}/>
   </Switch>
 )
