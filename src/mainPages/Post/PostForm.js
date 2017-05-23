@@ -17,8 +17,13 @@ export default class PostForm extends Component {
   }
   handleSubmit(e) {
     e.preventDefault();
-    console.log(`${this.state.author} said “${this.state.text}”`)
-    //we will be tying this into the POST method in a bit
+    let author = this.state.author.trim();
+    let text = this.state.text.trim();
+    if (!text || !author) {
+      return;
+    }
+    this.props.onPostSubmit({ author: author, text: text });
+    this.setState({ author: '', text: '' });
   }
   render() {
     return (

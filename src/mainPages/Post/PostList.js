@@ -6,7 +6,7 @@ export default class PostList extends Component {
   render() {
     let commentNodes = this.props.data.map(post => {
       return (
-        <Post author={ post.author } key={ post.id }>
+        <Post author={ post.author } key={ post._id }>
         { post.text }
         </Post>
       )
