@@ -74,6 +74,7 @@ router.route('/mainPosts')
   mainPost.text = req.body.text;
   mainPost.save(function(err) {
     if (err) {
+      console.log('hi');
       res.json(err);
     } else {
       res.json({ message: 'Post successfully added!' });

@@ -9,4 +9,4 @@ const MainPostSchema = new Schema({
   text: {type: String, required: true}
 });
 
-module.exports = mongoose.model('MainPost', MainPostSchema);
+module.exports = mongoose.model('MainPostSchema', MainPostSchema);
